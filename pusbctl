@@ -123,7 +123,6 @@ while :; do
 		--machine-readable)
 			MACHINE_READABLE=1
 			USBCTL_LOG_COLOR=never
-			USBCTL_DIFF_COLOR=never
 			USBCTL_GREP_COLOR=never
 			shift
 			continue
