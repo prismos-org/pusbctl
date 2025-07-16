@@ -1,0 +1,71 @@
+
+.TH "pusbctl" "1" "07/24/2018" "" "pusbctl manual"
+.SH "NAME"
+pusbctl \- deny_new_usb control script for Prism OS.
+.SH "SYNOPSIS"
+\fBpusbctl\fR [\fIOPTIONS\fR]... [\fICOMMAND\fR]
+.SH "DESCRIPTION"
+Control usb device and protection settings.
+.SH "OPTIONS"
+.PP
+\fB--machine-readable\fR
+.RS 4
+enables machine readable output mode
+.RE
+.PP
+.SH "COMMANDS"
+.PP
+\fBprotect\fR, \fBenable\fR, \fBon\fR
+.RS 4
+disallow new usb devices (protected)
+.RE
+.PP
+\fBunprotect\fR, \fBdisable\fR, \fBoff\fR
+.RS 4
+allow new usb devices (unprotected)
+.RE
+.PP
+\fBtemporary\fR, \fBtemp\fR, \fBtmp\fR [\fIseconds\fR]
+.RS 4
+temporarily disable protection (default 240 sec)
+.RE
+.PP
+\fBcheck\fR
+.RS 4
+exit with 1 if usb is unprotected
+.RE
+.PP
+\fBstatus\fR
+.RS 4
+print current protection status
+.RE
+.PP
+\fBlist\fR, \fBls\fR
+.RS 4
+list currently connected usb devices
+.RE
+.PP
+\fBlog\fR
+.RS 4
+display usb events in the kernel ring buffer
+.RE
+.PP
+\fBversion\fR
+.RS 4
+display version information and exit
+.RE
+.SH "VERSION"
+1.3-dev
+.SH "HOMEPAGE"
+https://github.com/prismos-org/pusbctl
+.RE
+
+Please report bugs and feature requests in the issue tracker.
+.RE
+.SH "AUTHOR"
+nexus
+.RE
+.SH "AUTHOR"
+Levente Polyak
+.RE
+kpcyrd

@@ -1,0 +1,10 @@
+[Unit]
+Description=deny new usb devices
+ConditionPathExists=/proc/sys/kernel/deny_new_usb
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/sysctl -q kernel.deny_new_usb=1
+
+[Install]
+WantedBy=multi-user.target
